@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #1b1e21 25%, #343a40 25%, #343a40 50%, #1b1e21 50%, #1b1e21 75%, #343a40 75%);
+            background-size: 10px 10px;
+            color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #212529;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #f8f9fa;
+            text-align: center;
+        }
+        .product {
+            background-color: #343a40;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .product h2 {
+            color: #f8f9fa;
+        }
+        .product p {
+            color: #ced4da;
+            line-height: 1.6;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px; /* Cambiar el tamaño según sea necesario */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado sutil */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mis amiguitos</h1>
+        <div class="product">
+            <h2>Hey</h2>
+            <p>Hey</p>
+        </di>
+        <div class="product">
+            <h2>Hey</h2>
+            <p>:D.</p>
+        </div>
+        <div class="product">
+            <h2>Hey</h2>
+            <p>:O</p>
+        </div>
+    </div>
+    <form>
+        {{ formulario }}
+        </form>
+    <div class="image-container">
+        <img src="{% static 'STREAMING/imagen1.jpg' %}" alt="Imagen bola amarilla Like">
+    </div>
+</body>
+</html>

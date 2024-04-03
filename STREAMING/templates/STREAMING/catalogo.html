@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Películas</title>
+</head>
+<body>
+    <h1>Catálogo de Películas</h1>
+
+    <!-- Formulario para agregar nueva película -->
+    <form action="{% url 'catalogo' %}" method="post">
+        {% csrf_token %}
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo">
+        <label for="sinopsis">Sinopsis:</label>
+        <input type="text" id="sinopsis" name="sinopsis">
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director">
+        <label for="fechaLanzamiento">Fecha de Lanzamiento:</label>
+        <input type="date" id="fechaLanzamiento" name="fechaLanzamiento">
+        <button type="submit">Agregar Película</button>
+    </form>
+
+    <!-- Mostrar catálogo actual de películas -->
+    <h2>Lista de Películas</h2>
+    <ul>
+        {% for pelicula in peliculas %}
+            <li>{{ pelicula.titulo }} - {{ pelicula.director }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
